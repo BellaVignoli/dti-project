@@ -1,0 +1,11 @@
+.first-section {
+    position: absolute;
+    width: 1920px;
+    height: 558px;
+    left: 0px;
+    top: 140px;
+
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 46.09%, rgba(0, 0, 0, 0.2) 64.27%), url("../ricky.png");
+    background-size: cover; /* ou 'contain' dependendo do seu layout */
+    background-position: center;
+}

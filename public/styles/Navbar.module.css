@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 1em 1.2em;
+    margin-bottom: 2em;
+    background-color: #CFE071;
+    color: #fff;
+}
+
+.teste{
+    position: absolute;
+    width: 1920px;
+    height: 140px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    margin-left: 0px;
+
+    background: #CFE071;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

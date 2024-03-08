@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+// import { Header } from '../app/components/header';
+import { Header } from '../app/components/header';
+import { FirstSection } from '../app/components/first-section';
+import { PrimaryInputWSearchIcon } from '../app/components/primary-input';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Noto_Sans({ subsets: ["latin"], weight: ['400', '700']});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header/>
+        <FirstSection/>
+        <PrimaryInputWSearchIcon/>
+        {children}
+      </body>
     </html>
   );
 }
