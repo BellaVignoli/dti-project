@@ -71,28 +71,28 @@ const Card = styled.div`
         width: 57px;
         height: 52px;
         gap: 8px
-        background: #474747;
+        //background: #474747;
         font-family: Noto Sans;
+        //font-style: italic;
         font-size: 16px;
         font-weight: 300;
-        line-height: 22px;
+        line-height: 25px;
         letter-spacing: 0em;
         text-align: left;
-
-
-    }
-
-    h4{
-        width: Fill (280px)
-        height: Hug (52px)
-        justify: space-between
-
+        
     }
 
     div{
         width: Fill (280px);
         height: Hug (52px);
         justify: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
 
     }
 
@@ -109,6 +109,19 @@ const Card = styled.div`
         cursor: pointer; 
 
     }
+
+    h4{
+        width: 49px;
+        height: 22px;
+        font-family: Noto Sans;
+        font-size: 20px;
+        font-weight: 1000;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #474747;
+
+    }
 `
 
 export function CharacterCard(props: CharacterCardProps){
@@ -118,11 +131,20 @@ export function CharacterCard(props: CharacterCardProps){
             <h1>
             <h2>{props.name}</h2>
             <h3>{props.origem}</h3>
-            <h4>
             <div>
-            <p>Status {props.status}</p> <p>Specie {props.especie}</p> <p>Gender {props.genero}</p>
+            <p> 
+                <h4>Status</h4> 
+                {props.status}
+            </p> 
+            <p>
+                <h4>Specie</h4> 
+                {props.especie}
+            </p> 
+            <p>
+                <h4>Gender</h4> 
+                {props.genero}
+            </p>
             </div>
-            </h4>
             </h1>
             <button onClick={() => { /* Adicione sua lógica de redirecionamento aqui */ }}>Ver mais sobre</button>
         </Card>

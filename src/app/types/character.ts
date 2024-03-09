@@ -8,3 +8,9 @@ export interface Character {
     image_url: string,
     especie: string
 }
+
+export interface CharacterFetchResponse{
+    data: {
+        Character: Character
+    }
+}

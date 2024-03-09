@@ -25,20 +25,36 @@ const FirstSectionContainer = styled.div`
 const Title = styled.h1`
     color: #FFFFFF;
     font-size: 50px;
-    position: absolute;
+    position: flex;
     width: 722px;
     height: 238px;
     left: 228px;
     top: 300px;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        font-size: 30px; /* Reduza o tamanho da fonte para dispositivos móveis */
+        //padding: 0 10px;
+        text-align: left;
+        padding-right: 10px;
+    }
+
 `
 const Subtitle = styled.p`
     color: #FFFFFF;
     font-size: 25px;
-    position: absolute;
+    position: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        font-size: 20px; /* Reduza o tamanho da fonte para dispositivos móveis */
+        //padding: 0 10px;
+        text-align: left;
+        padding-rigth: 10px;
+    }
+
 `
 
 

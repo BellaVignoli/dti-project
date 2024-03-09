@@ -11,8 +11,12 @@ const TagHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 12px 24px;
     background-color: #CFE071;
+
+    @media (min-width: 768px) {
+        padding: 20px 100px;
+    }
 `
 
 const Logo = styled.a`
