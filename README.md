@@ -7,6 +7,7 @@
 2- Vá para a pasta do projeto
 
 ```cd dti-project
+```
 
 3 - Instale as dependências
 
