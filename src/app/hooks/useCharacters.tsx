@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import axios, { AxiosPromise } from 'axios';
 import { CharactersFetchResponse } from '../types/characters-response';
+import { useFilter } from './useFilter';
+import { useDeferredValue } from 'react';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
@@ -25,12 +27,16 @@ const fetcher = (): AxiosPromise<CharactersFetchResponse> => {
 }
 
 export function useCharacters(){
+    const {search} = useFilter();
+    const searchDeferred = useDeferredValue(search);
     const { data } = useQuery({
         queryFn: fetcher,
         queryKey: ['characters']
     })
 
+    const characters = data?.data?.data?.allCharacters
+    const filteredCharacters = characters?.filter(character => character.name.toLowerCase().includes(searchDeferred.toLowerCase()))
     return{
-        data: data?.data?.data?.allCharacters
+        data: filteredCharacters
     }
 }

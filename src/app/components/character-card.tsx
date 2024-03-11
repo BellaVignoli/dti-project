@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import Link from 'next/link';
 
 interface CharacterCardProps{
+    id: string,
     image: string, 
     name: string,
     origem: string,
@@ -97,7 +99,7 @@ const Card = styled.div`
     }
 
     button{
-        width: 60%;
+        width: 100%;
         height: 50px;
         padding: 0 20px; 
         border-radius: 25px;
@@ -125,6 +127,7 @@ const Card = styled.div`
 `
 
 export function CharacterCard(props: CharacterCardProps){
+    console.log(props)
     return(
         <Card>
             <img src={props.image}/>
@@ -146,7 +149,10 @@ export function CharacterCard(props: CharacterCardProps){
             </p>
             </div>
             </h1>
-            <button onClick={() => { /* Adicione sua lógica de redirecionamento aqui */ }}>Ver mais sobre</button>
+            <Link href={`/character?id=${props.id}`}>
+            <button>Ver mais sobre</button>
+            </Link>
+
         </Card>
     )
 }

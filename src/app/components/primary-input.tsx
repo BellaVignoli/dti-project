@@ -33,13 +33,16 @@ const InputContainer = styled.div`
     }
 `
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    value: string,
+    handleChange: (value: string ) => void
 }
 
-export function PrimaryInputWSearchIcon(props: InputProps){
+export function PrimaryInputWSearchIcon({ handleChange, value, ...props }: InputProps){
     return (
         <InputContainer>
             <PrimaryInput 
-                placeholder="Buscar personagem"
+                onChange={(event) => handleChange(event.target.value)} 
+                value = {value}
                 {...props}
             />
             <SearchIcon/>

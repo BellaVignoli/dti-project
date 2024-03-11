@@ -10,8 +10,9 @@ const ListContainer = styled.div`
     width: 100%; 
     grid-gap: 10px;
     max-width: 1468px; 
-    padding: 0 20px; 
+    //padding: 0 50px; 
     align-items: center;
+    padding-left: 50px;
 
 
 @media (max-width: 768px) {
@@ -29,6 +30,7 @@ export function CharactersList() {
             {data?.map(character => 
             <CharacterCard
                 key={character.id}
+                id={character.id}
                 name={character.name}
                 origem={character.origem}
                 status={character.status}

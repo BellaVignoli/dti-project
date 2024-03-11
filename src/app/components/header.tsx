@@ -33,6 +33,7 @@ export function Header(props: HeaderProps) {
                     alt="Logo Header"
                     width={180}
                     height={180}
+                    priority
                 />
             </Logo>
             <div></div>
