@@ -1,15 +1,31 @@
 ## Getting Started
 
-First, run the development server:
+#Frontend
 
-```bash
+1- Clone o repositório
+
+2- Vá para a pasta do projeto
+
+cd dti-project
+
+3 - Instale as dependências
+
+npm install
+
+4 - Rode o frontend
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#API
+
+1 - Vá para a pasta da API
+
+cd api
+
+2 - Instale as depedências
+
+npm install
+
+3 - Inicie a API
+
+npm start
